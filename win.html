@@ -1,0 +1,131 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <title>Установка Python и первая программа на Windows</title>
+    </head>
+    <body>
+        <header>
+            
+            <div class="menu">
+                
+                <ul>
+                    <a href="index.html" class="icon"><img class="python_icon" src="python_icon.png"/></a>
+                <li ><a href="index.html">Главная</a></li>
+                <li ><a href="vveden.html">Введение в Python</a></li>
+                <li ><a href="osnovy.html">Основы Python</a></li>
+                <li ><a href="oop.html">ООП</a></li>
+                <li ><a href="obrosh.html">Обработка ошибок и исключений</a></li>
+                <li ><a href="spkort.html">Списки, кортежи и словари</a></li>
+                <li ><a href="module.html">Модули</a></li>
+                <li ><a href="stroki.html">Строки</a></li>
+                <li ><a href="pattern.html">Pattern matching</a></li>
+                <li ><a href="rabsfayl.html">Работа с файлами</a></li>
+                <li ><a href="rabsdat.html">Работа с датами и временем</a></li>  
+                </ul>          
+            </div>
+        </header>
+        
+        <div class="content">
+        <ul><p>Глава 1. Введение в Python</p>
+        <li><a href="yasprog.html">Язык программирования Python</a></li>
+        <li><a href="win.html">Установка Python и первая программа на Windows</a></li>
+        <li><a href="macos.html">Установка Python и первая программа на MacOS</a></li>
+        <li><a href="linux.html">Установка Python и первая программа на Linux</a></li>
+        <li><a href="veros.html">Управление версиями Python на Windows, MacOS и Linux</a></li>
+        <li><a href="pucharm.html">Первая программа в PyCharm</a></li>
+        <li><a href="rabvs.html">Python в Visual Studio</a></li>
+      
+        </ul>
+     
+       
+       
+       
+           
+       
+           <h3>Установка</h3>
+       <p>Для создания программ на Python нам потребуется интерпретатор. Для его установки перейдем на страницу 
+       <a href="https://www.python.org/downloads/" rel="nofollow">https://www.python.org/downloads/</a> и найдем ссылку на загрузку последней версии языка:</p>
+       <img src="1.1.png" alt="Установка Python">
+       <p>По нажатию на кнопку будет загружен соответствующей текущей ОС установщик Python. Следует учитывать, что Windows 7 и более ранние версии не поддерживаются.</p>
+       <p>На ОС Windows при запуске инсталлятора запускает окно мастера установки:</p>
+       <img src="1.3.png" alt="Установка дистрибутива Python 3.11 на Windows">
+       <p>Здесь мы можем задать путь, по которому будет устанавливаться интерпретатор. Оставим его по умолчанию, то есть 
+       <span class="ii">C:\Users\[имя_пользователя]\AppData\Local\Programs\Python\Python312\</span>.</p>
+       <p>Кроме того, в самом низу отметим флажок "Add Python 3.12 to PATH", чтобы добавить путь к интерпретатору в переменные среды.</p>
+       <p>После этого мы можем проверить установку Python и его версию, запустив в командной строке/треминале команду</p>
+       <pre class="sh">python --version</pre>
+       <h3>Запуск интерпретатора</h3>
+       <p>После установки интерпретатора, как было описано в прошлой теме, мы можем начать создавать приложения на Python. Итак, создадим первую простенькую программу.</p>
+       <p>Как было сказано в прошлой теме, программа интерпретатора, если при установке не был изменен адрес, по умолчанию 
+       устанавливается на Linux по пути <span class="ii">usr/local/bin/python311</span>, а на Windows по пути 
+       <span class="ii">C:\Users\[имя_пользователя]\AppData\Local\Programs\Python\Python311\</span> и представляет файл под названием <span class="b">python.exe</span>.</p>
+       <img src="1.11.png" alt="Интерпретатор Python">
+       <p>Запустим интерпретатор и введем в него следующую строку:</p>
+       <pre class="sh">print "hello world"</pre>
+       <p>И консоль выведет строку "hello world":</p>
+       <pre class="sh">Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+       Type "help", "copyright", "credits" or "license" for more information.
+       &gt;&gt;&gt; print("hello world")
+       hello world
+      
+       </pre>
+       <p>Для этой программы использовалась функция <span class="b">print()</span>, которая выводит некоторую строку на консоль.</p>
+       <h3>Создание файла программы</h3>
+       <p>В реальности, как правило, программы определяются во внешних файлах-скриптах и затем передаются интерпретатору на выполнение. Поэтому создадим файл программы. 
+       Для этого на диске C или где-нибудь в другом месте файловой системы определим для скриптов папку <span class="b">python</span>. А в этой папке создадим новый текстовый файл, который 
+       назовем <span class="b">hello.py</span>. По умолчанию файлы с кодом на языке Python, как правило, имеют расширение <span class="b">py</span>.</p>
+       <img src="1.6.png" alt="Создание скрипта на языке Python">
+       <p>Откроем этот файл в любом текстовом редакторе и добавим в него следующий код:</p>
+       <div><div id="highlighter_441151" class="syntaxhighlighter  py"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="py plain">name </code><code class="py keyword">=</code> <code class="py functions">input</code><code class="py plain">(</code><code class="py string">"Введите имя: "</code><code class="py plain">)</code></div><div class="line number2 index1 alt1"><code class="py functions">print</code><code class="py plain">(</code><code class="py string">"Привет,"</code><code class="py plain">, name)</code></div></div></td></tr></tbody></table></div></div>
+       <img src="1.8.png" alt="Python в Visual Studio Code">
+       <p>Скрипт состоит из двух строк. Первая строка с помощью функции <span class="b">input()</span> ожидает ввода пользователем своего имени. Введенное 
+       имя затем попадает в переменную <code>name</code>.</p>
+       <p>Вторая строка с помощью функции <code>print()</code> выводит приветствие вместе с введенным именем.</p>
+       <p>Теперь запустим командную строку/терминал и с помощью команды cd перейдем к папке, где находится файл с исходным кодом hello.py (например, в моем случае это папка C:\python).</p><pre class="sh">cd c:\python
+       </pre>
+       <p>Далее вначале введем полный путь к интерпретатору, а затем полный путь к файлу скрипта. К примеру, в моем случае в консоль надо будет вести:</p>
+       <pre class="sh">C:\Users\eugen\AppData\Local\Programs\Python\Python312\python.exe hello.py
+       </pre>
+       <p>Но если при установке была указана опция <span class="b">"Add Python 3.12 to PATH"</span>, то есть путь к интерпретатору Python был добавлен в переменные среды, то вместо полного пути к интерпретатору можно просто написать python:</p>
+       <pre class="sh">python hello.py
+       </pre>
+       <p>Либо даже можно сократить:</p>
+       <pre class="sh">py hello.py
+       </pre>
+       <p>Варианты с обоими способами запуска:</p>
+       <pre class="sh">Microsoft Windows [Version 10.0.22621.2361]
+       (c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+       
+       C:\Users\eugen&gt;cd c:\python
+       
+       c:\python&gt;C:\Users\eugen\AppData\Local\Programs\Python\Python312\python.exe hello.py
+       Введите имя: Eugene
+       Привет, Eugene
+       
+       c:\python&gt;python hello.py
+       Введите имя: Tom
+       Привет, Tom
+       
+       c:\python&gt;py hello.py
+       Введите имя: Bob
+       Привет, Bob
+       
+       c:\python&gt;
+       </pre>
+       <p>В итоге программа выведет приглашение к вводу имени, а затем приветствие.</p>
+           
+           
+           
+         
+       
+         </div>
+        </div>
+        <footer>
+            <div><p>Хартов Никита Сергеевич К-31, 2023</p></div>
+        </footer>
+    
+    </body>
+    </html>
